@@ -1,0 +1,60 @@
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: none;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--color-tertiary);
+	border: 1px solid var(--color-tertiary-2);
+	border-radius: 100vh;
+}
+
+* {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 1.2;
+	background-color: var(--color-BG);
+	color: var(--color-primary);
+	width: 100%;
+	padding-bottom: 5rem;
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-primary) var(--color-secondary);
+	transition: 0.4s ease-in-out;
+}
+
+.theme-toggler {
+	position: fixed;
+	background: none;
+	border: none;
+	top: 15px;
+	left: 65px;
+	z-index: 101;
+}
+
+.lang-toggler {
+	position: fixed;
+	background: none;
+	border: none;
+	top: 20px;
+	left: 20px;
+	z-index: 101;
+}
+
+.lang-toggler span {
+	position: absolute;
+	top: 0;
+	line-height: 0;
+	right: -7px;
+}
+
+body[data-theme='dark'] .lang-toggler {
+	filter: invert(100%);
+}

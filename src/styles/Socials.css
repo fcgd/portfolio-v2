@@ -1,0 +1,16 @@
+.socials {
+	bottom: 20px;
+	left: 20px;
+	position: fixed;
+	display: flex;
+	gap: 1.5rem;
+}
+
+body[data-theme='light'] .socials {
+	filter: invert(100%);
+}
+
+.lng-icon {
+	height: 25px;
+	width: 25px;
+}

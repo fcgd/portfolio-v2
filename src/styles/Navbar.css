@@ -1,0 +1,44 @@
+.nav {
+	display: flex;
+	align-items: center;
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-inline: 1.5rem;
+	z-index: 100;
+}
+
+.nav__pages {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	gap: 20px;
+}
+
+.nav__item {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.nav__link {
+	position: relative;
+	color: var(--color-secondary);
+	font-size: 1rem;
+	text-decoration: none;
+	cursor: default;
+}
+.nav__link:hover {
+	color: var(--color-primary);
+}
+
+.underline {
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background-color: var(--color-primary);
+}

@@ -1,0 +1,23 @@
+.scroll {
+	bottom: 20px;
+	right: 20px;
+	position: fixed;
+	background: transparent;
+	border: none;
+	height: 50px;
+	width: 50px;
+	padding: auto;
+	z-index: 999;
+	cursor: pointer;
+	color: white;
+}
+
+.scroll img {
+	height: 25px;
+	width: 25px;
+	filter: invert(100%);
+}
+
+body[data-theme='light'] .scroll img {
+	filter: invert(0%);
+}

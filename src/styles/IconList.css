@@ -1,0 +1,51 @@
+.skills__logo-panel {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+.skills__logo-panel:after {
+	content: '';
+	position: absolute;
+	width: 85%;
+	border-top: 2px solid var(--color-primary);
+}
+.skills__logo-panel::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	min-height: 10rem;
+	border-left: 2px solid var(--color-primary);
+}
+
+.skills__logo {
+	display: flex;
+	gap: 5px;
+	min-width: 50%;
+	height: 40px;
+	margin: 0;
+	padding: 1rem;
+}
+
+.logo__icon {
+	border-radius: 5px;
+	width: 24px;
+	height: 24px;
+	padding: 4px;
+}
+
+body[data-theme='light'] .logo__icon[data-name='GitHub'] {
+	filter: invert(100%);
+}
+body[data-theme='light'] .logo__icon[data-name='Next.js'] {
+	filter: invert(100%);
+}
+body[data-theme='light'] .logo__icon[data-name='Express'] {
+	filter: invert(100%);
+}
+
+.skills__caption {
+	font-family: 'consolas';
+	color: var(--color-primary-2);
+}

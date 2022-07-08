@@ -1,0 +1,39 @@
+{
+	"env": {
+		"browser": true,
+		"es2022": true
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		},
+		"extends": [
+			"plugin:react/recommended",
+			"plugin:react/jsx-runtime",
+			"standard",
+			"eslint-config-prettier"
+		],
+		"parser": "@babel/eslint-parser",
+		"parserOptions": {
+			"ecmaFeatures": {
+				"jsx": true
+			},
+			"ecmaVersion": "latest",
+			"requireConfigFile": false,
+			"sourceType": "module",
+			"allowImportExportEverywhere": true
+		},
+		"plugins": ["react"],
+		"rules": {
+			"react/prop-types": "off"
+		}
+	},
+	"rules": {
+		"no-restricted-exports": [
+			"off",
+			{
+				"restrictedNamedExports": []
+			}
+		]
+	}
+}
