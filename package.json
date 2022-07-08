@@ -16,6 +16,7 @@
 		"@formspree/react": "^2.3.0",
 		"@icons-pack/react-simple-icons": "^5.1.2",
 		"framer-motion": "6.4.2",
+		"gh-pages": "^4.0.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-router-dom": "^6.3.0"
