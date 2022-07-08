@@ -8,7 +8,9 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"format": "prettier --write .",
-		"lint": "eslint . --fix"
+		"lint": "eslint . --fix",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d dist"
 	},
 	"dependencies": {
 		"@formspree/react": "^2.3.0",
