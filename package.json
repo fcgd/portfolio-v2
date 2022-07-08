@@ -1,22 +1,19 @@
 {
 	"name": "portfolio-2",
 	"private": true,
-	"homepage": "https://fcgd.github.io/portfolio-v2",
+	"homepage": "https://www.fabriciocesaretti.com",
 	"version": "0.0.0",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
 		"preview": "vite preview",
 		"format": "prettier --write .",
-		"lint": "eslint . --fix",
-		"predeploy": "npm run build",
-		"deploy": "gh-pages -d dist"
+		"lint": "eslint . --fix"
 	},
 	"dependencies": {
 		"@formspree/react": "^2.3.0",
 		"@icons-pack/react-simple-icons": "^5.1.2",
 		"framer-motion": "6.4.2",
-		"gh-pages": "^4.0.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-router-dom": "^6.3.0"

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import '../styles/Resume.css';
 import { motion } from 'framer-motion';
 import LanguageContext from '../context/LanguageContext';
-import ResumePDF from '/Fabricio Cesaretti Resume.pdf';
+import ResumePDF from '../../public/Fabricio Cesaretti Resume.pdf';
 
 export const Resume = () => {
 	const { language } = useContext(LanguageContext);

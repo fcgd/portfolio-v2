@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import LanguageContext from '../context/LanguageContext';
 import { motion, useCycle } from 'framer-motion';
-import LangIcon from '/icons/language.svg';
+import LangIcon from '../../public/icons/language.svg';
 
 export const LangToggler = () => {
 	const [animate, cycle] = useCycle({ rotate: 0 }, { rotate: 360 });

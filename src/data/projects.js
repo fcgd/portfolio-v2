@@ -1,5 +1,5 @@
-import portfolio from '/images/portfolio.png';
-import noimage from '/images/undefined.png';
+import portfolio from '../../public/images/portfolio.png';
+import noimage from '../../public/images/undefined.png';
 
 export const PROJECTS_EN = [
 	{

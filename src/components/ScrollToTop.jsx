@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import '../styles/ScrollToTop.css';
 import LanguageContext from '../context/LanguageContext';
 import { motion } from 'framer-motion';
-import arrowTop from '/icons/arrow-top.svg';
+import arrowTop from '../../public/icons/arrow-top.svg';
 
 export const ScrollToTop = () => {
 	const { language } = useContext(LanguageContext);
