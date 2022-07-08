@@ -1,3 +1,27 @@
-@import '../node_modules/modern-normalize/modern-normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-@import 'styles/css-vars.css';
+
+:root {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body[data-theme='dark'] {
+	--color-BG: rgb(10, 10, 10);
+	--color-primary: rgb(235, 235, 235);
+	--color-primary-alpha: rgba(255, 255, 255, 0.05);
+	--color-primary-2: rgb(226, 226, 226);
+	--color-secondary: rgb(136, 136, 136);
+	--color-secondary-2: rgb(214, 214, 214);
+	--color-tertiary: rgb(29, 29, 29);
+	--color-tertiary-2: rgb(70, 70, 70);
+}
+
+body[data-theme='light'] {
+	--color-BG: rgb(238, 238, 238);
+	--color-primary: rgb(0, 0, 0);
+	--color-primary-alpha: rgba(0, 0, 0, 0.1);
+	--color-primary-2: rgb(20, 20, 20);
+	--color-secondary: rgb(138, 137, 135);
+	--color-secondary-2: rgb(196, 195, 195);
+	--color-tertiary: rgb(156, 163, 175);
+	--color-tertiary-2: rgb(186, 191, 199);
+}
