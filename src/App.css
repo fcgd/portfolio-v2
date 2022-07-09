@@ -59,3 +59,9 @@ body {
 body[data-theme='dark'] .lang-toggler {
 	filter: invert(100%);
 }
+
+@media screen and (max-width: 768px) {
+	.App {
+		margin: 2rem;
+	}
+}
