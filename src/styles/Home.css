@@ -29,6 +29,6 @@
 	font-family: var(--montserrat);
 	font-weight: 600;
 	display: inline-block;
-	font-size: clamp(4rem, 6vw, 6rem);
+	font-size: clamp(3rem, 6vw, 6rem);
 	text-transform: uppercase;
 }

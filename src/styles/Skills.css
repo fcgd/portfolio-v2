@@ -25,6 +25,7 @@
 .skills__h2 {
 	font-size: clamp(2rem, 3vw, 3rem);
 	font-weight: bold;
+	text-align: center;
 }
 
 .skills__panel {
