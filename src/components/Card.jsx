@@ -11,12 +11,17 @@ export const Card = ({ id, title, description, image, github, web, color }) => {
 		if (isOpen) {
 			document.body.style.overflow = 'hidden';
 		} else {
-			document.body.style.overflow = 'auto';
+			document.body.style.overflowY = 'auto';
+			document.body.style.overflowX = 'hidden';
 		}
 	}, [!isOpen]);
 
 	const handleClick = () => {
-		setIsOpen(!isOpen);
+		if (window.innerWidth < 768) {
+			return;
+		} else {
+			setIsOpen(!isOpen);
+		}
 	};
 
 	return (

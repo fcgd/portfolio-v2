@@ -10,7 +10,7 @@
 	box-shadow: 10px 10px 20px 0 var(--color-primary-alpha);
 	border: 1px solid var(--color-secondary);
 	border-radius: 10px;
-	padding-bottom: .5rem;
+	padding-bottom: 0.5rem;
 }
 
 .modal-open {
@@ -82,4 +82,10 @@
 	background-color: var(--color-primary);
 	font-weight: bold;
 	font-size: 1.3rem;
+}
+
+@media screen and (max-width: 768px) {
+	.modal img {
+		cursor: initial;
+	}
 }
