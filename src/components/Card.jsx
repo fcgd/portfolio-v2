@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import '../styles/Card.css';
 import { motion } from 'framer-motion';
+import LanguageContext from '../context/LanguageContext';
 
-export const Card = ({ id, title, description, image, github, web }) => {
+export const Card = ({ id, title, description, image, github, web, color }) => {
 	const [isOpen, setIsOpen] = useState(false);
+	const { language } = useContext(LanguageContext);
 
 	useEffect(() => {
 		if (isOpen) {
@@ -18,7 +20,12 @@ export const Card = ({ id, title, description, image, github, web }) => {
 	};
 
 	return (
-		<motion.div className='card' id={id} key={id}>
+		<motion.div
+			className='card'
+			id={id}
+			key={id}
+			style={{ backgroundColor: color }}
+		>
 			<div className='image__shadow'>
 				<div
 					className={`${isOpen ? 'modal-open' : 'modal'}`}
@@ -29,12 +36,12 @@ export const Card = ({ id, title, description, image, github, web }) => {
 						onClick={handleClick}
 						layout
 					>
-						<motion.img src={image} alt={title} />
+						<motion.img src={image} alt={title[language]} />
 					</motion.div>
 				</div>
 			</div>
-			<h3 className='card__title'>{title}</h3>
-			<p className='card__description'>{description}</p>
+			<h3 className='card__title'>{title[language]}</h3>
+			<p className='card__description'>{description[language]}</p>
 			<div className='link'>
 				<motion.a
 					className='link_git'

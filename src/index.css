@@ -1,6 +1,7 @@
 :root {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	--font-montserrat: 'Montserrat', sans-serif;
 }
 
 body[data-theme='dark'] {

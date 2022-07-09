@@ -2,16 +2,15 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 300px;
-	height: 450px;
-	padding-bottom: 10px;
-	font-family: arial;
+	width: 400px;
+	min-height: 550px;
+	font-family: var(--font-montserrat);
 	text-align: center;
 	color: var(--color-primary);
-	background-color: none;
 	box-shadow: 10px 10px 20px 0 var(--color-primary-alpha);
 	border: 1px solid var(--color-secondary);
 	border-radius: 10px;
+	padding-bottom: .5rem;
 }
 
 .modal-open {
@@ -52,43 +51,25 @@
 }
 
 .card__title {
-	font-size: 1.5rem;
+	font-size: 2rem;
 	width: 100%;
 	font-weight: bold;
-	padding: 0;
+	padding: 1rem;
 	margin: 0;
 }
 
 .card__description {
+	font-size: 1.2rem;
 	flex-grow: 1;
 	padding: 1rem;
-}
-
-.tech {
-	display: flex;
-	justify-content: space-evenly;
-	width: 100%;
-	height: 50px;
-}
-
-.tech__icon {
-	border-radius: 5px;
-	width: 24px;
-	height: 24px;
-	padding: 4px;
-}
-
-.tech__icon {
-	border-radius: 5px;
-	width: 24px;
-	height: 24px;
-	padding: 4px;
+	margin: 0;
 }
 
 .link {
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
+	padding: 1rem;
 }
 
 .link a {
@@ -100,4 +81,5 @@
 	color: var(--color-BG);
 	background-color: var(--color-primary);
 	font-weight: bold;
+	font-size: 1.3rem;
 }

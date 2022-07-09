@@ -3,11 +3,10 @@ import LanguageContext from '../context/LanguageContext';
 import '../styles/Projects.css';
 import { motion } from 'framer-motion';
 import { Card } from './Card';
-import { PROJECTS_EN, PROJECTS_ES } from '../data/projects';
+import { PROJECTS } from '../data/projects';
 
 export const Projects = ({}) => {
 	const { language } = useContext(LanguageContext);
-	const projects = language === 'es' ? PROJECTS_ES : PROJECTS_EN;
 
 	const container = {
 		hidden: {
@@ -54,22 +53,25 @@ export const Projects = ({}) => {
 				viewport={{ once: true }}
 				variants={container}
 			>
-				{projects.map(({ id, title, description, image, github, web }) => (
-					<motion.div
-						className='projects__card-container'
-						key={id}
-						variants={item}
-					>
-						<Card
-							id={id}
-							title={title}
-							description={description}
-							image={image}
-							github={github}
-							web={web}
-						/>
-					</motion.div>
-				))}
+				{PROJECTS.map(
+					({ id, title, description, image, github, web, color }) => (
+						<motion.div
+							className='projects__card-container'
+							key={id}
+							variants={item}
+						>
+							<Card
+								id={id}
+								title={title}
+								description={description}
+								image={image}
+								github={github}
+								web={web}
+								color={color}
+							/>
+						</motion.div>
+					)
+				)}
 			</motion.div>
 		</motion.section>
 	);
