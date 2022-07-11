@@ -28,10 +28,15 @@ const item = {
 	},
 };
 
-export const Navigation = ({ className, handleClick, children }) => {
+export const Navigation = ({ className, handleClick, children, isOpen }) => {
 	const [activeIndex, setActiveIndex] = useState(null);
 	return (
-		<nav className={`nav__${className}`}>
+		<nav
+			className={`nav__${className}`}
+			style={{
+				display: `${!isOpen && className === 'mobile' ? 'none' : 'flex'}`,
+			}}
+		>
 			<motion.ul
 				onHoverEnd={() => setActiveIndex(null)}
 				className={`nav__pages-${className}`}

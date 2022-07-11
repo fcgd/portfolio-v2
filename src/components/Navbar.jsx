@@ -49,20 +49,24 @@ export const Navbar = () => {
 			</Navigation>
 		</>
 	) : (
-		<>
-			<motion.div
-				className='menu'
-				style={{ zIndex: isOpen ? 2 : 1 }}
-				initial={false}
-				animate={isOpen ? 'open' : 'closed'}
-				custom='100%'
+		<motion.div
+			className='menu'
+			style={{
+				zIndex: isOpen ? '2' : '1',
+			}}
+			initial={false}
+			animate={isOpen ? 'open' : 'closed'}
+			custom='100%'
+		>
+			<motion.div className='navbar' variants={sidebar} />
+			<Navigation
+				className='mobile'
+				handleClick={() => toggleOpen()}
+				isOpen={isOpen}
 			>
-				<motion.div className='navbar' variants={sidebar} />
-				<Navigation className='mobile' handleClick={() => toggleOpen()}>
-					<Resume className='mobile' />
-				</Navigation>
-				<MenuToggle toggle={() => toggleOpen()} />
-			</motion.div>
-		</>
+				<Resume className='mobile' />
+			</Navigation>
+			<MenuToggle toggle={() => toggleOpen()} />
+		</motion.div>
 	);
 };
