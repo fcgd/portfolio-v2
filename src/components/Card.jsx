@@ -29,7 +29,9 @@ export const Card = ({ id, title, description, image, github, web, color }) => {
 			className='card'
 			id={id}
 			key={id}
-			style={{ backgroundColor: color }}
+			style={{
+				backgroundColor: color,
+			}}
 		>
 			<div className='image__shadow'>
 				<div

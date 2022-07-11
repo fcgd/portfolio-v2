@@ -4,17 +4,17 @@ import { motion } from 'framer-motion';
 import LanguageContext from '../context/LanguageContext';
 import ResumePDF from '../../public/Fabricio Cesaretti Resume.pdf';
 
-export const Resume = () => {
+export const Resume = ({ className }) => {
 	const { language } = useContext(LanguageContext);
 
 	return (
-		<div className='resume-wrapper'>
+		<div className={`resume-wrapper-${className}`}>
 			<a
 				href={ResumePDF}
 				className='resume'
 				target='_blank'
 				rel='noopener noreferrer'
-				title={`${language === 'es' ? 'Curriculum' : 'Resume'}`}
+				title={`${language === 'es' ? 'Ver Curriculum' : 'Open Resume'}`}
 			>
 				CV
 			</a>
@@ -30,8 +30,8 @@ export const Resume = () => {
 					version='1.1'
 					xmlns='http://www.w3.org/2000/svg'
 					viewBox='0 0 485 485'
-					width='24'
-					height='24'
+					width={`${className === 'mobile' ? '48px' : '24px'}`}
+					height={`${className === 'mobile' ? '48px' : '24px'}`}
 					fill='white'
 					overflow='visible'
 					whileHover={{

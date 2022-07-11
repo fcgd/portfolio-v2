@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import '../styles/ScrollToTop.css';
 import LanguageContext from '../context/LanguageContext';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import arrowTop from '../../public/icons/arrow-top.svg';
 
 export const ScrollToTop = () => {
@@ -19,7 +19,7 @@ export const ScrollToTop = () => {
 	}, []);
 
 	return (
-		<>
+		<AnimatePresence>
 			{showScroll ? (
 				<motion.button
 					title={`${language === 'es' ? 'Volver arriba' : 'Back to top'}`}
@@ -30,6 +30,8 @@ export const ScrollToTop = () => {
 							behavior: 'smooth',
 						});
 					}}
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
 					whileHover={{
 						scale: 1.5,
 						transition: {
@@ -40,10 +42,11 @@ export const ScrollToTop = () => {
 							yoyo: true,
 						},
 					}}
+					exit={{ opacity: 0 }}
 				>
 					<img src={arrowTop} alt='Top Arrow' />
 				</motion.button>
 			) : null}
-		</>
+		</AnimatePresence>
 	);
 };

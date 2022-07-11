@@ -1,43 +1,68 @@
-import React, { useContext, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/Navbar.css';
-import LanguageContext from '../context/LanguageContext';
-import { motion } from 'framer-motion';
-import { data } from '../data/navigation';
+import { motion, useCycle } from 'framer-motion';
+import { MenuToggle } from './MenuToggle';
+import { Navigation } from './Navigation';
 import { Resume } from './Resume';
 
+const InitialState = innerWidth < 600 ? true : false;
+
+const sidebar = {
+	open: (height = 1000) => ({
+		clipPath: `circle(${height * 2 + 200}px at 100% 100%)`,
+		transition: {
+			type: 'spring',
+			stiffness: 20,
+			restDelta: 2,
+		},
+	}),
+	closed: {
+		clipPath: 'circle(0px at 100% 0px)',
+		transition: {
+			delay: 0.5,
+			type: 'spring',
+			stiffness: 400,
+			damping: 40,
+		},
+	},
+};
+
 export const Navbar = () => {
-	const [activeIndex, setActiveIndex] = useState(null);
-	const { language } = useContext(LanguageContext);
+	const [isMobile, setIsMobile] = useState(InitialState);
+	const [isOpen, toggleOpen] = useCycle(false, true);
+	console.log(isOpen);
+	const handleResize = () => {
+		if (window.innerWidth < 600) {
+			setIsMobile(true);
+		} else {
+			setIsMobile(false);
+		}
+	};
+	useEffect(() => {
+		window.addEventListener('resize', handleResize);
+	}, []);
 
-	return (
-		<nav className='nav'>
-			<motion.ul onHoverEnd={() => setActiveIndex(null)} className='nav__pages'>
-				{data.map(({ label, path }, index) => {
-					const isActive = activeIndex === index;
-
-					return (
-						<motion.li
-							key={index}
-							onHoverStart={() => setActiveIndex(index)}
-							className='nav__item'
-						>
-							<a href={path} className='nav__link'>
-								{isActive ? (
-									<motion.div
-										layoutId='underline'
-										className='underline'
-										initial={{ opacity: 0 }}
-										animate={{ opacity: 1 }}
-										exit={{ opacity: 0 }}
-									/>
-								) : null}
-								<span>{label[language]}</span>
-							</a>
-						</motion.li>
-					);
-				})}
-			</motion.ul>
-			<Resume />
-		</nav>
+	return !isMobile ? (
+		<>
+			<Navigation className='desktop'>
+				<Resume className='desktop' />
+			</Navigation>
+		</>
+	) : (
+		<>
+			<motion.div
+				className='menu'
+				style={{ zIndex: isOpen ? 2 : 1 }}
+				initial={false}
+				animate={isOpen ? 'open' : 'closed'}
+				custom='100%'
+			>
+				<motion.div className='navbar' variants={sidebar} />
+				<Navigation className='mobile' handleClick={() => toggleOpen()}>
+					<Resume className='mobile' />
+				</Navigation>
+				<MenuToggle toggle={() => toggleOpen()} />
+			</motion.div>
+		</>
 	);
 };

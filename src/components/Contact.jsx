@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import '../styles/Contact.css';
 import LanguageContext from '../context/LanguageContext';
 import { useForm, ValidationError } from '@formspree/react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export const Contact = () => {
 	const [state, handleSubmit] = useForm(import.meta.env.VITE_FORM);
@@ -58,28 +58,32 @@ export const Contact = () => {
 					{language === 'es' ? 'Enviar' : 'Send'}
 				</motion.button>
 			</form>
-			{showMessage && (
-				<div className='message__wrapper'>
-					<motion.div
-						className='contact__message-succeeded'
-						initial={{ opacity: 0, y: 50 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5 }}
-						viewport={{ once: true }}
-					>
-						{language === 'es' ? (
-							<p>
-								Mensaje enviado con éxito! ✔ <br /> Me pondré en contacto
-								contigo lo antes posible.{' '}
-							</p>
-						) : (
-							<p>
-								Message sent! ✔ <br /> I'll get back to you as soon as possible.
-							</p>
-						)}
-					</motion.div>
-				</div>
-			)}
+			<AnimatePresence>
+				{showMessage && (
+					<div className='message__wrapper'>
+						<motion.div
+							className='contact__message-succeeded'
+							initial={{ opacity: 0, y: 50 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5 }}
+							viewport={{ once: true }}
+							exit={{ opacity: 0, y: 50 }}
+						>
+							{language === 'es' ? (
+								<p>
+									Mensaje enviado con éxito! ✔ <br /> Me pondré en contacto
+									contigo lo antes posible.{' '}
+								</p>
+							) : (
+								<p>
+									Message sent! ✔ <br /> I'll get back to you as soon as
+									possible.
+								</p>
+							)}
+						</motion.div>
+					</div>
+				)}
+			</AnimatePresence>
 		</div>
 	);
 };

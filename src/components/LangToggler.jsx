@@ -4,12 +4,12 @@ import { motion, useCycle } from 'framer-motion';
 import LangIcon from '../../public/icons/language.svg';
 
 export const LangToggler = () => {
-	const [animate, cycle] = useCycle({ rotate: 0 }, { rotate: 360 });
+	const [animate, cycleAnimate] = useCycle({ rotate: 0 }, { rotate: 360 });
 	const { language, setLanguage } = useContext(LanguageContext);
 
 	const handleLanguage = () => {
 		setLanguage(language === 'en' ? 'es' : 'en');
-		cycle();
+		cycleAnimate();
 	};
 
 	return (
