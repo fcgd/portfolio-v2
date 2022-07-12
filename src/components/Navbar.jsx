@@ -42,7 +42,7 @@ export const Navbar = () => {
 	useEffect(() => {
 		if (isOpen) {
 			document.body.style.overflow = 'hidden';
-			document.getElementsByClassName('menu')[0].style.zIndex = '1';
+			document.getElementsByClassName('menu')[0].style.zIndex = '200';
 		} else {
 			setTimeout(() => {
 				document.body.style.overflow = 'auto';
