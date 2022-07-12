@@ -38,15 +38,21 @@ export const Navbar = () => {
 			setIsMobile(false);
 		}
 	};
+
 	window.addEventListener('resize', handleResize);
+
 	useEffect(() => {
 		if (isOpen) {
 			document.body.style.overflow = 'hidden';
-			document.getElementsByClassName('menu')[0].style.zIndex = '200';
+			document
+				.getElementsByClassName('menu')[0]
+				.setAttribute('style', 'z-index: 200');
 		} else {
 			setTimeout(() => {
 				document.body.style.overflow = 'auto';
-				document.getElementsByClassName('menu')[0].style.zIndex = '-1';
+				document
+					.getElementsByClassName('menu')[0]
+					.setAttribute('style', 'z-index: -1');
 			}, 1000);
 		}
 		return () => clearTimeout();

@@ -10,6 +10,7 @@ export const Card = ({ id, title, description, image, github, web, color }) => {
 	useEffect(() => {
 		if (isOpen) {
 			document.body.style.overflow = 'hidden';
+			document.body.style.marginRight = '10px';
 		} else {
 			document.body.style.overflowY = 'auto';
 			document.body.style.overflowX = 'hidden';
