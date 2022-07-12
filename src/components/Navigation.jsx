@@ -5,10 +5,14 @@ import LanguageContext from '../context/LanguageContext';
 
 const variants = {
 	open: {
-		transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+		transition: {
+			staggerChildren: 0.05,
+			delayChildren: 0.3,
+			staggerDirection: -1,
+		},
 	},
 	closed: {
-		transition: { staggerChildren: 0.05, staggerDirection: -1 },
+		transition: { staggerChildren: 0.1, staggerDirection: 1 },
 	},
 };
 const item = {
@@ -20,7 +24,7 @@ const item = {
 		},
 	},
 	closed: {
-		y: -50,
+		y: '-100vh',
 		opacity: 0,
 		transition: {
 			y: { stiffness: 1000 },
@@ -31,12 +35,7 @@ const item = {
 export const Navigation = ({ className, handleClick, children, isOpen }) => {
 	const [activeIndex, setActiveIndex] = useState(null);
 	return (
-		<nav
-			className={`nav__${className}`}
-			style={{
-				display: `${!isOpen && className === 'mobile' ? 'none' : 'flex'}`,
-			}}
-		>
+		<nav className={`nav__${className}`}>
 			<motion.ul
 				onHoverEnd={() => setActiveIndex(null)}
 				className={`nav__pages-${className}`}
@@ -54,6 +53,7 @@ export const Navigation = ({ className, handleClick, children, isOpen }) => {
 							}
 							className={`nav__item-${className}`}
 							variants={item}
+							onClick={handleClick}
 						>
 							<motion.a
 								href={path}
@@ -62,7 +62,6 @@ export const Navigation = ({ className, handleClick, children, isOpen }) => {
 								whileHover={{
 									scale: `${className === 'mobile' ? '1.1' : '1'}`,
 								}}
-								onClick={handleClick}
 							>
 								{isActive && className === 'desktop' ? (
 									<motion.div

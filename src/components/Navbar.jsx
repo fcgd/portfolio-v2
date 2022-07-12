@@ -49,10 +49,6 @@ export const Navbar = () => {
 	) : (
 		<motion.div
 			className='menu'
-			style={{
-				height: !isOpen ? '2px' : '100%',
-				zIndex: !isOpen ? '1' : '2',
-			}}
 			initial={false}
 			animate={isOpen ? 'open' : 'closed'}
 			custom='100%'

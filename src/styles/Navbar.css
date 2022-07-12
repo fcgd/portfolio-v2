@@ -8,7 +8,7 @@
 	width: 100%;
 	top: 0;
 	left: 0;
-	z-index: 2;
+	z-index: 200;
 	padding-right: 1rem;
 }
 
@@ -58,6 +58,7 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
+	z-index: 200;
 }
 .nav__mobile {
 	display: flex;
@@ -65,7 +66,7 @@
 	justify-content: center;
 	gap: 2rem;
 	flex-grow: 1;
-	z-index: 2;
+	z-index: 200;
 }
 
 .nav__pages-mobile {
@@ -78,6 +79,7 @@
 
 .nav__item-mobile {
 	display: flex;
+	/* z-index: 200; */
 }
 
 .nav__link-mobile {
@@ -95,6 +97,7 @@
 	bottom: 0;
 	width: 100%;
 	background: #4f5845;
+	z-index: 200;
 }
 
 /* HAMBURGER ICON */
@@ -109,7 +112,7 @@
 	width: 50px;
 	height: 50px;
 	background: transparent;
-	z-index: 7;
+	z-index: 700;
 }
 body[data-theme='dark'] .menu__icon {
 	filter: invert(100%);
