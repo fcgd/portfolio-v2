@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import '../styles/Card.css';
 import { motion } from 'framer-motion';
 import LanguageContext from '../context/LanguageContext';
+import background from '../../public/icons/background.svg';
 
 export const Card = ({ id, title, description, image, github, web, color }) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -31,6 +32,7 @@ export const Card = ({ id, title, description, image, github, web, color }) => {
 			id={id}
 			key={id}
 			style={{
+				backgroundImage: `url(${background})`,
 				backgroundColor: color,
 			}}
 		>

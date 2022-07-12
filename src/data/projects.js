@@ -11,7 +11,7 @@ export const PROJECTS = [
 		},
 		description: {
 			en: ' My first personal portfolio, back when I was starting with web design. It was created with HTML and CSS only. I decided to redevelop it to a modern version with more advanced technologies.',
-			es: 'Mi primer portfolio personal, recien cuando estaba empezando con el diseño web. Fue creado solo con HTML y CSS. Decidi re-desarrollarlo a una version mas moderna y con tecnologias mas avanzadas.',
+			es: 'Mi primer portfolio personal, cuando recién estaba empezando con el diseño web. Fue creado solo con HTML y CSS. Decidí re-desarrollarlo a una versión mas moderna y con tecnologías mas avanzadas.',
 		},
 		image: portfolio,
 		web: 'https://fcgd.github.io/portfolio/',
@@ -27,7 +27,7 @@ export const PROJECTS = [
 		},
 		description: {
 			en: 'My personal portfolio, the site you are curretly on. It was created with ReactJS using ViteJS and Framer Motion to create a more dynamic and interactive experience.',
-			es: 'Mi portfolio personal, el sitio que estas viendo ahora mismo. Fue creado con ReactJS usando ViteJS y Framer Motion para crear una experiencia de usuario mas dinamica.',
+			es: 'Mi portfolio personal, el sitio que estás viendo ahora mismo. Fue creado con ReactJS usando ViteJS y Framer Motion para crear una experiencia de usuario mas dinamica.',
 		},
 		image: portfolio2,
 		web: 'https://www.fabriciocesaretti.com/',
