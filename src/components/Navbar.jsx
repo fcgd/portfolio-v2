@@ -30,7 +30,7 @@ const sidebar = {
 export const Navbar = () => {
 	const [isMobile, setIsMobile] = useState(InitialState);
 	const [isOpen, toggleOpen] = useCycle(false, true);
-	console.log(isOpen);
+
 	const handleResize = () => {
 		if (window.innerWidth < 600) {
 			setIsMobile(true);
@@ -43,16 +43,15 @@ export const Navbar = () => {
 	}, []);
 
 	return !isMobile ? (
-		<>
-			<Navigation className='desktop'>
-				<Resume className='desktop' />
-			</Navigation>
-		</>
+		<Navigation className='desktop'>
+			<Resume className='desktop' />
+		</Navigation>
 	) : (
 		<motion.div
 			className='menu'
 			style={{
-				height: !isOpen ? '50px' : '100%',
+				height: !isOpen ? '2px' : '100%',
+				zIndex: !isOpen ? '1' : '2',
 			}}
 			initial={false}
 			animate={isOpen ? 'open' : 'closed'}

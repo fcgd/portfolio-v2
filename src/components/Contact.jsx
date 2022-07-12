@@ -5,7 +5,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 export const Contact = () => {
-	const [state, handleSubmit] = useForm(import.meta.env.VITE_FORM);
+	const [state, handleSubmit] = useForm('xjvldwjn');
 	const [showMessage, setShowMessage] = useState(false);
 	const { language } = useContext(LanguageContext);
 

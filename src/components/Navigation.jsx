@@ -61,10 +61,6 @@ export const Navigation = ({ className, handleClick, children, isOpen }) => {
 								whileTap={{ scale: `${className === 'mobile' ? '0.95' : '1'}` }}
 								whileHover={{
 									scale: `${className === 'mobile' ? '1.1' : '1'}`,
-									transition: {
-										duration: 2,
-										ease: 'easeInOut',
-									},
 								}}
 								onClick={handleClick}
 							>
