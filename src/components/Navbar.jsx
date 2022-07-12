@@ -38,30 +38,42 @@ export const Navbar = () => {
 			setIsMobile(false);
 		}
 	};
+	window.addEventListener('resize', handleResize);
 	useEffect(() => {
-		window.addEventListener('resize', handleResize);
-	}, []);
+		if (isOpen) {
+			document.body.style.overflow = 'hidden';
+			document.getElementsByClassName('menu')[0].style.zIndex = '1';
+		} else {
+			setTimeout(() => {
+				document.body.style.overflow = 'auto';
+				document.getElementsByClassName('menu')[0].style.zIndex = '-1';
+			}, 1000);
+		}
+		return () => clearTimeout();
+	}, [isOpen]);
 
 	return !isMobile ? (
 		<Navigation className='desktop'>
 			<Resume className='desktop' />
 		</Navigation>
 	) : (
-		<motion.div
-			className='menu'
-			initial={false}
-			animate={isOpen ? 'open' : 'closed'}
-			custom='100%'
-		>
-			<motion.div className='navbar' variants={sidebar} />
-			<Navigation
-				className='mobile'
-				handleClick={() => toggleOpen()}
-				isOpen={isOpen}
+		<>
+			<motion.div
+				className='menu'
+				initial={false}
+				animate={isOpen ? 'open' : 'closed'}
+				custom='100%'
 			>
-				<Resume className='mobile' />
-			</Navigation>
-			<MenuToggle toggle={() => toggleOpen()} />
-		</motion.div>
+				<motion.div className='navbar' variants={sidebar} />
+				<Navigation
+					className='mobile'
+					handleClick={() => toggleOpen()}
+					isOpen={isOpen}
+				>
+					<Resume className='mobile' />
+				</Navigation>
+			</motion.div>
+			<MenuToggle isOpen={isOpen} toggle={() => toggleOpen()} />
+		</>
 	);
 };

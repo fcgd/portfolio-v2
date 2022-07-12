@@ -6,13 +6,15 @@ import LanguageContext from '../context/LanguageContext';
 const variants = {
 	open: {
 		transition: {
-			staggerChildren: 0.05,
-			delayChildren: 0.3,
-			staggerDirection: -1,
+			staggerChildren: 0.07,
+			delayChildren: 0.2,
+			staggerDirection: 1,
 		},
 	},
 	closed: {
-		transition: { staggerChildren: 0.1, staggerDirection: 1 },
+		transition: {
+			staggerChildren: 0.05,
+		},
 	},
 };
 const item = {
@@ -24,7 +26,7 @@ const item = {
 		},
 	},
 	closed: {
-		y: '-100vh',
+		y: -100,
 		opacity: 0,
 		transition: {
 			y: { stiffness: 1000 },
@@ -54,15 +56,10 @@ export const Navigation = ({ className, handleClick, children, isOpen }) => {
 							className={`nav__item-${className}`}
 							variants={item}
 							onClick={handleClick}
+							whileHover={className === 'mobile' && { scale: 1.1 }}
+							whileTap={{ scale: 0.9 }}
 						>
-							<motion.a
-								href={path}
-								className={`nav__link-${className}`}
-								whileTap={{ scale: `${className === 'mobile' ? '0.95' : '1'}` }}
-								whileHover={{
-									scale: `${className === 'mobile' ? '1.1' : '1'}`,
-								}}
-							>
+							<motion.a href={path} className={`nav__link-${className}`}>
 								{isActive && className === 'desktop' ? (
 									<motion.div
 										layoutId='underline'

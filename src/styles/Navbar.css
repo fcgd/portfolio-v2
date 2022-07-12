@@ -58,7 +58,6 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	z-index: 200;
 }
 .nav__mobile {
 	display: flex;
@@ -79,7 +78,6 @@
 
 .nav__item-mobile {
 	display: flex;
-	/* z-index: 200; */
 }
 
 .nav__link-mobile {
@@ -96,7 +94,7 @@
 	right: 0;
 	bottom: 0;
 	width: 100%;
-	background: #4f5845;
+	background: #173346;
 	z-index: 200;
 }
 
