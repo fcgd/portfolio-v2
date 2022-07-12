@@ -21,6 +21,22 @@ export const PROJECTS = [
 	{
 		id: 2,
 		title: {
+			en: 'Portfolio',
+			es: 'Portfolio',
+		},
+		description: {
+			en: 'This is my portfolio. It was created with ReactJS using Vite and animated with Framer Motion',
+			es: 'Este es mi portfolio. Fue creado con ReactJS usando Vite y animado con Framer Motion',
+		},
+		image: noimage,
+		web: 'https://www.fabriciocesaretti.com/',
+		github: 'https://github.com/fcgd/portfolio-v2',
+		tech: ['HTML5', 'CSS3', 'ReactJS', 'JavaScript', 'Vite', 'Framer Motion'],
+		color: '#173346',
+	},
+	{
+		id: 3,
+		title: {
 			en: 'Paintings Collection eCommerce [WIP]',
 			es: 'Colección de pinturas eCommerce [WIP]',
 		},
@@ -32,23 +48,7 @@ export const PROJECTS = [
 		web: 'https://fcgd.github.io/portfolio/',
 		github: 'https://github.com/fcgd/portfolio',
 		tech: ['HTML5', 'CSS3'],
-		color: 'none',
-	},
-	{
-		id: 3,
-		title: {
-			en: 'Rick and Morty APP [WIP]',
-			es: 'Rick and Morty APP [WIP]',
-		},
-		description: {
-			en: 'A ReactJS app that shows the characters of the Rick and Morty series. It was created with ReactJS and Redux. It was a project that I undertook during my studies at the University.',
-			es: 'Una aplicación ReactJS que muestra los personajes de la serie Rick y Morty. Fue creada con ReactJS y Redux. Fue un proyecto que realizé durante mis estudios en la Universidad.',
-		},
-		image: noimage,
-		web: 'https://fcgd.github.io/portfolio/',
-		github: 'https://github.com/fcgd/portfolio',
-		tech: ['HTML5', 'CSS3'],
-		color: 'none',
+		color: '#1a4c2b',
 	},
 	{
 		id: 4,
@@ -64,6 +64,22 @@ export const PROJECTS = [
 		web: 'https://fcgd.github.io/portfolio/',
 		github: 'https://github.com/fcgd/portfolio',
 		tech: ['HTML5', 'CSS3'],
-		color: 'none',
+		color: '#78386f',
+	},
+	{
+		id: 5,
+		title: {
+			en: 'Rick and Morty APP [WIP]',
+			es: 'Rick and Morty APP [WIP]',
+		},
+		description: {
+			en: 'A ReactJS app that shows the characters of the Rick and Morty series. It was created with ReactJS and Redux. It was a project that I undertook during my studies at the University.',
+			es: 'Una aplicación ReactJS que muestra los personajes de la serie Rick y Morty. Fue creada con ReactJS y Redux. Fue un proyecto que realizé durante mis estudios en la Universidad.',
+		},
+		image: noimage,
+		web: 'https://fcgd.github.io/portfolio/',
+		github: 'https://github.com/fcgd/portfolio',
+		tech: ['HTML5', 'CSS3'],
+		color: '#b9b11c',
 	},
 ];
