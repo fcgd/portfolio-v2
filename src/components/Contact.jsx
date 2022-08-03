@@ -26,6 +26,27 @@ export const Contact = () => {
 
 	return (
 		<div className='section__contact' id='contact'>
+			<div className='contact__map'>
+				<iframe
+					title='map'
+					width='100%'
+					height='100'
+					frameBorder='0'
+					scrolling='no'
+					marginHeight='0'
+					marginWidth='0'
+					loading='lazy'
+					allowFullScreen={true}
+					noreferrerpolicy='no-referrer-when-downgrade'
+					src='https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=-32.944465,-60.647482&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=0&amp;layer=0&amp;output=embed'
+					style={{
+						filter: 'grayscale(1) contrast(1.2) opacity(0.4)',
+						height: '110vh',
+						marginTop: '-150px',
+					}}
+				></iframe>
+			</div>
+
 			<h2 className='contact__h2'>
 				{language === 'es' ? 'Contáctame' : 'Contact'}
 			</h2>
@@ -53,6 +74,7 @@ export const Contact = () => {
 				<motion.button
 					type='submit'
 					disabled={state.submitting}
+					whileTap={{ scale: 0.95 }}
 					whileHover={{ scale: 1.03 }}
 				>
 					{language === 'es' ? 'Enviar' : 'Send'}
