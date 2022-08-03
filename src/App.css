@@ -24,7 +24,7 @@ body {
 	background-color: var(--color-BG);
 	color: var(--color-primary);
 	width: 100%;
-	padding-bottom: 5rem;
+	padding-bottom: 3rem;
 	scrollbar-width: thin;
 	scrollbar-color: var(--color-primary) var(--color-secondary);
 	transition: 0.4s ease-in-out;
