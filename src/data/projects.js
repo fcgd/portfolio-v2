@@ -1,6 +1,5 @@
 import portfolio from '../../public/images/portfolio.png';
 import portfolio2 from '../../public/images/portfolio-2.png';
-import noimage from '../../public/images/undefined.png';
 
 export const PROJECTS = [
 	{
