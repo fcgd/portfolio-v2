@@ -1,5 +1,6 @@
 import portfolio from '../../public/images/portfolio.png';
 import portfolio2 from '../../public/images/portfolio-2.png';
+import qrApp from '../../public/images/qr-app.png';
 
 export const PROJECTS = [
 	{
@@ -32,24 +33,24 @@ export const PROJECTS = [
 		web: 'https://www.fabriciocesaretti.com/',
 		github: 'https://github.com/fcgd/portfolio-v2',
 		tech: ['HTML5', 'CSS3', 'ReactJS', 'JavaScript', 'Vite', 'Framer Motion'],
-		color: '#173346',
+		color: '#214761',
 	},
-	// {
-	// 	id: 3,
-	// 	title: {
-	// 		en: 'Paintings Collection eCommerce [WIP]',
-	// 		es: 'Colección de pinturas eCommerce [WIP]',
-	// 	},
-	// 	description: {
-	// 		en: 'A eCommerce site for paintings collection. It was created with NextJS. It was a project that I undertook during my studies at the University.',
-	// 		es: 'Un sitio eCommerce para la colección de pinturas. Fue creado con NextJS. Fue un proyecto que realizé durante mis estudios en la Universidad.',
-	// 	},
-	// 	image: noimage,
-	// 	web: 'https://fcgd.github.io/portfolio/',
-	// 	github: 'https://github.com/fcgd/portfolio',
-	// 	tech: ['HTML5', 'CSS3'],
-	// 	color: '#1a4c2b',
-	// },
+	{
+		id: 3,
+		title: {
+			en: 'QR Code APP',
+			es: 'QR Code APP',
+		},
+		description: {
+			en: 'A simple QR code generator that allows you to generate QR codes with a URL. It was created with HTML, Javascript and Tailwind.',
+			es: 'Un generador de códigos QR simple que te permite generar códigos QR con una URL. Fue creado con HTML, Javascript y Tailwind.',
+		},
+		image: qrApp,
+		web: 'https://fcgd.github.io/qr-app/',
+		github: 'https://github.com/fcgd/qr-app',
+		tech: ['HTML5', 'JavaScript', 'Tailwind'],
+		color: '#BB3F3F',
+	},
 	// {
 	// 	id: 4,
 	// 	title: {
