@@ -7,13 +7,13 @@ import {
 	Nodedotjs,
 	Express,
 	Mongodb,
-	Sass,
 	Bootstrap,
 	Git,
 	Github,
 	Eslint,
 	Npm,
 	Postman,
+	Tailwindcss,
 } from '@icons-pack/react-simple-icons';
 
 export const SKILLS = [
@@ -67,10 +67,10 @@ export const SKILLS = [
 		color: '120,39%,46%',
 	},
 	{
-		name: 'Sass',
-		Icon: Sass,
+		name: 'TailwindCSS',
+		Icon: Tailwindcss,
 		type: 'frontend',
-		color: '330,50%,60%',
+		color: '196,97%,49%',
 	},
 	{
 		name: 'Bootstrap',
