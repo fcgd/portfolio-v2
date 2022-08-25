@@ -10,6 +10,7 @@
 		"format": "prettier --write .",
 		"lint": "eslint . --fix"
 	},
+	"type": "module",
 	"dependencies": {
 		"@formspree/react": "^2.3.0",
 		"@icons-pack/react-simple-icons": "^5.1.2",
