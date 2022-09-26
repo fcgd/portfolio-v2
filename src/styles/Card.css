@@ -45,3 +45,9 @@ body[data-theme='dark'] .link_git {
 .card a {
 	text-decoration: none;
 }
+
+@media screen and (max-width: 576px) {
+	.card {
+		width: 380px;
+	}
+}
