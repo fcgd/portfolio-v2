@@ -1,6 +1,7 @@
 import portfolio from '../../public/images/portfolio.png';
 import portfolio2 from '../../public/images/portfolio-2.png';
 import qrApp from '../../public/images/qr-app.png';
+import TwitterClone from '../../public/images/twitter-clone.png';
 
 export const PROJECTS = [
 	{
@@ -51,36 +52,20 @@ export const PROJECTS = [
 		tech: ['HTML5', 'JavaScript', 'Tailwind'],
 		color: '#BB3F3F',
 	},
-	// {
-	// 	id: 4,
-	// 	title: {
-	// 		en: 'League of Legends APP [WIP]',
-	// 		es: 'League of Legends APP [WIP]',
-	// 	},
-	// 	description: {
-	// 		en: 'A ReactJS app that shows the champions of the League of Legends. It was created with ReactJS and Redux. It was a project that I undertook during my studies at the University.',
-	// 		es: 'Una aplicación ReactJS que muestra los campeones de la League of Legends. Fue creada con ReactJS y Redux. Fue un proyecto que realizé durante mis estudios en la Universidad.',
-	// 	},
-	// 	image: noimage,
-	// 	web: 'https://fcgd.github.io/portfolio/',
-	// 	github: 'https://github.com/fcgd/portfolio',
-	// 	tech: ['HTML5', 'CSS3'],
-	// 	color: '#78386f',
-	// },
-	// {
-	// 	id: 5,
-	// 	title: {
-	// 		en: 'Rick and Morty APP [WIP]',
-	// 		es: 'Rick and Morty APP [WIP]',
-	// 	},
-	// 	description: {
-	// 		en: 'A ReactJS app that shows the characters of the Rick and Morty series. It was created with ReactJS and Redux. It was a project that I undertook during my studies at the University.',
-	// 		es: 'Una aplicación ReactJS que muestra los personajes de la serie Rick y Morty. Fue creada con ReactJS y Redux. Fue un proyecto que realizé durante mis estudios en la Universidad.',
-	// 	},
-	// 	image: noimage,
-	// 	web: 'https://fcgd.github.io/portfolio/',
-	// 	github: 'https://github.com/fcgd/portfolio',
-	// 	tech: ['HTML5', 'CSS3'],
-	// 	color: '#b9b11c',
-	// },
+	{
+		id: 4,
+		title: {
+			en: 'Twitter Clone',
+			es: 'Clon de Twitter',
+		},
+		description: {
+			en: ' A copy of Twitter site, recreating its functionality. It was created with Next.js, Node.js, MongoDB, and Tailwind.',
+			es: 'Una copia del sitio de Twitter, recreando su funcionalidad. Se creó con Next.js, Node.js, MongoDB y Tailwind.',
+		},
+		image: TwitterClone,
+		web: 'https://fcgd.github.io/qr-app/',
+		github: 'https://github.com/fcgd/qr-app',
+		tech: ['Next.js', 'Node.js', 'MongoDB', 'Mongoose', 'Tailwind'],
+		color: '#1C9CF4',
+	},
 ];

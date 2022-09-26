@@ -1,5 +1,7 @@
 .section__projects {
 	display: flex;
+	font-family: var(--font-spacegrotesc);
+	text-transform: uppercase;
 	flex-direction: column;
 	align-items: center;
 	width: 90%;
@@ -19,6 +21,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	/* gap: 2rem; */
+	gap: 2rem;
 	margin: auto;
 }

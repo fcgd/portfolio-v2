@@ -54,7 +54,7 @@ export const Projects = ({}) => {
 				variants={container}
 			>
 				{PROJECTS.reverse().map(
-					({ id, title, description, image, github, web, color }) => (
+					({ id, title, description, image, github, web, color, tech }) => (
 						<motion.div
 							className='projects__card-container'
 							key={id}
@@ -68,6 +68,7 @@ export const Projects = ({}) => {
 								github={github}
 								web={web}
 								color={color}
+								tech={tech}
 							/>
 						</motion.div>
 					)
