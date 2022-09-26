@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+	font-family: Heading;
+	src: local('Good Brush'), url('/font/Good Brush.woff') format('woff');
+	font-display: block;
+}
+
 :root {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	--font-montserrat: 'Montserrat', sans-serif;
+	--font-spacegrotesc: 'Space Grotesk', sans-serif;
 }
 
 body[data-theme='dark'] {
