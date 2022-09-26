@@ -12,6 +12,7 @@ export const Card = ({ id, title, image, github, web, tech }) => {
 			className='card'
 			onHoverStart={() => setShow(false)}
 			onHoverEnd={() => setShow(true)}
+			onTap={() => setShow(!show)}
 		>
 			<AnimatePresence>
 				{show && (
