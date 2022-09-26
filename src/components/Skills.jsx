@@ -11,7 +11,7 @@ export const Skills = () => {
 	return (
 		<div className='section__skills' id='skills'>
 			<motion.h2
-				className='skills__h2'
+				className='skills__title'
 				initial={{ opacity: 0, y: 50 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 3 }}
@@ -21,6 +21,7 @@ export const Skills = () => {
 					? 'Habilidades y Tecnologías'
 					: 'Skills and Technologies'}
 			</motion.h2>
+
 			<div className='skills__container'>
 				{data.map(e => (
 					<div className='skills__panel' key={`${e}-panel`}>

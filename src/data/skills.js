@@ -7,13 +7,14 @@ import {
 	Nodedotjs,
 	Express,
 	Mongodb,
-	Bootstrap,
 	Git,
 	Github,
 	Eslint,
 	Npm,
 	Postman,
 	Tailwindcss,
+	Visualstudiocode,
+	Vite,
 } from '@icons-pack/react-simple-icons';
 
 export const SKILLS = [
@@ -67,16 +68,10 @@ export const SKILLS = [
 		color: '120,39%,46%',
 	},
 	{
-		name: 'TailwindCSS',
+		name: 'Tailwind',
 		Icon: Tailwindcss,
 		type: 'frontend',
 		color: '196,97%,49%',
-	},
-	{
-		name: 'Bootstrap',
-		Icon: Bootstrap,
-		type: 'frontend',
-		color: '264,39%,51%',
 	},
 	{
 		name: 'Git',
@@ -103,9 +98,15 @@ export const SKILLS = [
 		color: '0,59%,51%',
 	},
 	{
-		name: 'Postman',
-		Icon: Postman,
+		name: 'VSCode',
+		Icon: Visualstudiocode,
 		type: 'tools',
-		color: '16,100%,60%',
+		color: '204,94%,49%',
+	},
+	{
+		name: 'Vite',
+		Icon: Vite,
+		type: 'tools',
+		color: '47,97%,56%',
 	},
 ];

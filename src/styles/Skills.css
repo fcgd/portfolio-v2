@@ -1,5 +1,6 @@
 .section__skills {
 	display: flex;
+	font-family: var(--font-spacegrotesc);
 	flex-flow: column wrap;
 	justify-content: center;
 	align-items: center;
@@ -11,6 +12,7 @@
 	padding-top: 5rem;
 	padding-bottom: 50px;
 	gap: 1rem;
+	text-align: center;
 }
 
 .skills__container {
@@ -22,17 +24,22 @@
 .skills__container > * {
 	flex-basis: 100%;
 }
-.skills__h2 {
+.skills__title {
+	font-family: var(--font-spacegrotesc);
+	text-transform: uppercase;
 	font-size: clamp(2rem, 3vw, 3rem);
 	font-weight: bold;
 	text-align: center;
+	word-spacing: 0.8rem;
 }
+
 
 .skills__panel {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	max-width: 300px;
+	margin-top: 1rem;
 }
 
 .skills__panel__title {

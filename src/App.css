@@ -37,7 +37,7 @@ body {
 	border: none;
 	top: 15px;
 	left: 65px;
-	z-index: 300;
+	z-index: 100;
 }
 
 .lang-toggler {
@@ -46,7 +46,7 @@ body {
 	border: none;
 	top: 20px;
 	left: 20px;
-	z-index: 300;
+	z-index: 100;
 }
 
 .lang-toggler span {
