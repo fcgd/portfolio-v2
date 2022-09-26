@@ -53,7 +53,7 @@ export const Projects = ({}) => {
 				viewport={{ once: true }}
 				variants={container}
 			>
-				{PROJECTS.reverse().map(
+				{PROJECTS.map(
 					({ id, title, description, image, github, web, color, tech }) => (
 						<motion.div
 							className='projects__card-container'
