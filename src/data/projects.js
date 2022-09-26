@@ -63,7 +63,7 @@ export const PROJECTS = [
 			es: 'Una copia del sitio de Twitter, recreando su funcionalidad. Se creó con Next.js, Node.js, MongoDB y Tailwind.',
 		},
 		image: TwitterClone,
-		web: 'https://fcgd.github.io/qr-app/',
+		web: 'https://twitter-clone-omega-ten.vercel.app/',
 		github: 'https://github.com/fcgd/qr-app',
 		tech: ['Next.js', 'Node.js', 'MongoDB', 'Mongoose', 'Tailwind'],
 		color: '#1C9CF4',
