@@ -7,7 +7,7 @@ export const MenuToggle = ({ toggle, isOpen }) => {
 			animate={isOpen ? 'open' : 'closed'}
 			fill='transparent'
 			strokeWidth='3'
-			stroke='black'
+			stroke={isOpen ? 'white' : 'black'}
 			strokeLinecap='round'
 			{...props}
 		/>

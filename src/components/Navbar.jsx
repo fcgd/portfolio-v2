@@ -3,7 +3,6 @@ import '../styles/Navbar.css';
 import { motion, useCycle } from 'framer-motion';
 import { MenuToggle } from './MenuToggle';
 import { Navigation } from './Navigation';
-import { Resume } from './Resume';
 
 const InitialState = innerWidth < 600 ? true : false;
 
@@ -59,9 +58,7 @@ export const Navbar = () => {
 	}, [isOpen]);
 
 	return !isMobile ? (
-		<Navigation className='desktop'>
-			<Resume className='desktop' />
-		</Navigation>
+		<Navigation className='desktop'></Navigation>
 	) : (
 		<>
 			<motion.div
@@ -75,9 +72,7 @@ export const Navbar = () => {
 					className='mobile'
 					handleClick={() => toggleOpen()}
 					isOpen={isOpen}
-				>
-					<Resume className='mobile' />
-				</Navigation>
+				></Navigation>
 			</motion.div>
 			<MenuToggle isOpen={isOpen} toggle={() => toggleOpen()} />
 		</>
