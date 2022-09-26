@@ -1,8 +1,15 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, {
+	useCallback,
+	useContext,
+	useEffect,
+	useRef,
+	useState,
+} from 'react';
 import '../styles/Contact.css';
 import LanguageContext from '../context/LanguageContext';
 import { useForm, ValidationError } from '@formspree/react';
 import { AnimatePresence, motion } from 'framer-motion';
+import ReactCanvasConfetti from 'react-canvas-confetti';
 
 export const Contact = () => {
 	const [state, handleSubmit] = useForm(import.meta.env.VITE_FORM);
@@ -11,11 +18,66 @@ export const Contact = () => {
 
 	const form = document.getElementById('contact-form');
 
+	const canvasStyles = {
+		position: 'fixed',
+		pointerEvents: 'none',
+		width: '100%',
+		height: '100%',
+		top: 0,
+		left: 0,
+		zIndex: 100,
+	};
+
+	const refAnimationInstance = useRef(null);
+
+	const getInstance = useCallback(instance => {
+		refAnimationInstance.current = instance;
+	}, []);
+
+	const makeShot = useCallback((particleRatio, opts) => {
+		refAnimationInstance.current &&
+			refAnimationInstance.current({
+				...opts,
+				origin: { y: 0.7 },
+				particleCount: Math.floor(200 * particleRatio),
+			});
+	}, []);
+
+	const fire = useCallback(() => {
+		makeShot(0.25, {
+			spread: 26,
+			startVelocity: 55,
+		});
+
+		makeShot(0.2, {
+			spread: 60,
+		});
+
+		makeShot(0.35, {
+			spread: 100,
+			decay: 0.91,
+			scalar: 0.8,
+		});
+
+		makeShot(0.1, {
+			spread: 120,
+			startVelocity: 25,
+			decay: 0.92,
+			scalar: 1.2,
+		});
+
+		makeShot(0.1, {
+			spread: 120,
+			startVelocity: 45,
+		});
+	}, [makeShot]);
+
 	useEffect(() => {
 		if (state.succeeded === false) {
 			return;
 		} else {
 			setShowMessage(true);
+			fire();
 			form.reset();
 		}
 		const Timer = setTimeout(() => {
@@ -94,7 +156,7 @@ export const Contact = () => {
 							{language === 'es' ? (
 								<p>
 									Mensaje enviado con éxito! ✔ <br /> Me pondré en contacto
-									contigo lo antes posible.{' '}
+									contigo lo antes posible.
 								</p>
 							) : (
 								<p>
@@ -106,6 +168,7 @@ export const Contact = () => {
 					</div>
 				)}
 			</AnimatePresence>
+			<ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles} />
 		</div>
 	);
 };
