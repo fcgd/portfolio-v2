@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import '../styles/Profile.css';
 import LanguageContext from '../context/LanguageContext';
-import ResumePDF from '../../public/Fabricio Cesaretti Resume.pdf';
 
 export const Profile = () => {
 	const { language } = useContext(LanguageContext);
@@ -32,7 +31,7 @@ export const Profile = () => {
 					{language === 'es' ? 'Contactame' : 'Contact me'}
 				</a>
 				<a
-					href={ResumePDF}
+					href='https://drive.google.com/file/d/1iZ9yELbn92RxN__WREwaHQP3fK28LXUq/'
 					className='cv-btn'
 					title={`${
 						language === 'es' ? 'Descargar Curriculum' : 'Download Resume'
