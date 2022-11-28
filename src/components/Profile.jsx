@@ -31,7 +31,7 @@ export const Profile = () => {
 					{language === 'es' ? 'Contactame' : 'Contact me'}
 				</a>
 				<a
-					href='https://drive.google.com/uc?export=download&id=1iZ9yELbn92RxN__WREwaHQP3fK28LXUq/'
+					href='https://drive.google.com/uc?export=download&id=1iZ9yELbn92RxN__WREwaHQP3fK28LXUq'
 					className='cv-btn'
 					title={`${
 						language === 'es' ? 'Descargar Curriculum' : 'Download Resume'
